@@ -11,12 +11,22 @@ const footer = () => {
               <strong className="text-pink-400 underline">
                 FPB.JPEG <i className="bi bi-instagram"></i>
               </strong>
+            </a>{" "}
+            |{" "}
+          </h1>
+          <h1>
+            Sawer Gua{" "}
+            <a href="https://saweria.co/FajarSatBoy">
+              <strong className="underline text-green-300">FajarSatBoy <i class="bi bi-coin"></i></strong>
             </a>
           </h1>
         </div>
       </footer>
       <div className="flex justify-center">
-        <p className="text-red-500">On Developed <i className="bi bi-exclamation-square-fill text-yellow-400"></i></p>
+        <p className="text-red-500">
+          On Developed{" "}
+          <i className="bi bi-exclamation-square-fill text-yellow-400"></i>
+        </p>
       </div>
     </>
   );
