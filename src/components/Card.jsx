@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import KhodamIMG from "../assets/khodam.png";
+import Footer from "./Footer.jsx";
 
 const card = () => {
   //Check Nama apakah sudah masuk apa belum
@@ -111,7 +112,7 @@ const card = () => {
   //Mengembalikan Tampilan
   return (
     <>
-      <div className="flex flex-row min-h-screen justify-center items-center p-5">
+      <div className="flex min-h-screen justify-center items-center p-5 flex-col">
         <div className="flex flex-col bg-blue-200 p-24 rounded-xl gap-5 mobile:p-4 mobile:gap-2 flex-wrap text-center">
           <div className="flex flex-row justify-center font-bold mb-5 p-3 mobile:mb-2">
             <img src={KhodamIMG} className="object-scale-down w-20" />
@@ -188,6 +189,7 @@ const card = () => {
             </>
           )}
         </div>
+        <Footer />
       </div>
     </>
   );
