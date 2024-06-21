@@ -21,7 +21,7 @@ const footer = () => {
               Support kami di{" "}
               <a href="https://saweria.co/FajarSatBoy">
                 <strong className="underline text-green-300">
-                  Saweria<i className="bi bi-coin"></i>
+                  Saweria <i className="bi bi-coin"></i>
                 </strong>
               </a>
             </p>
