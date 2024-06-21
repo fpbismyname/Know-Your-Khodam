@@ -320,7 +320,7 @@ const card = () => {
           </div>
           <div className="flex flex-row justify-center font-bold mb-5 p-3 mobile:mb-2">
             <h1 className="text-5xl tracking-widest mobile:text-xl">
-              Khow Your Khodam
+              Know Your Khodam
             </h1>
           </div>
           {name ? (
