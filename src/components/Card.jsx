@@ -3,98 +3,58 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import KhodamIMG from "../assets/khodam.png";
 import Footer from "./Footer.jsx";
 import Swal from "sweetalert2";
+import Confetti from "js-confetti";
 
 const card = () => {
   //Check Nama apakah sudah masuk apa belum
   const [name, setName] = useState("");
   const [nama, setNama] = useState("");
   const [khodam, setCurrentKhodam] = useState(0);
-  const GotKhodam = new Audio("https://cdn.pixabay.com/audio/2021/08/03/audio_7991a32b95.mp3");
-  const inserKhodam = new Audio("https://cdn.pixabay.com/audio/2021/08/04/audio_0c8fbcb4c1.mp3");
+  const GotKhodam = new Audio(
+    "https://cdn.pixabay.com/audio/2021/08/03/audio_7991a32b95.mp3"
+  );
+  const inserKhodam = new Audio(
+    "https://cdn.pixabay.com/audio/2021/08/04/audio_0c8fbcb4c1.mp3"
+  );
 
   //Data Khodam
   var dataKhodam = [
     {
-      nama_khodam: "Kucing Botol",
+      nama_khodam: "Bagas Dribble",
       skill_khodam:
-        "Mengumpulkan Botol Kosong dan Menjadikannya Sebagai Koleksi Berharga",
+        "Khodam pendamping yang akan selalu menjaga anda dengan kekuatan dribble manjanya",
+      emoji_khodam: "🏀",
     },
     {
-      nama_khodam: "Si Gajah Listrik",
+      nama_khodam: "Katak Bhizer",
       skill_khodam:
-        "Mengisi Baterai dengan Cepat sehingga Anda Tidak Perlu Khawatir Lagi Tentang Kehabisan Baterai",
+        "Raja khodam pengendali pukulan, kebal terhadap serangan benda tajam, sekali tebas nyawa kalian terlepas",
+      emoji_khodam: "🐸",
     },
     {
-      nama_khodam: "Lemur Kacamata",
+      nama_khodam: "Ambatron",
       skill_khodam:
-        "Mengoreksi Kesalahan dengan Cepat dan Memperbaiki Kesalahan Secara Mandiri",
+        "Sebuah khodam dari masa depan, memiliki kekuatan laser muani setara panasnya dengan matahari",
+      emoji_khodam: "🤖",
     },
     {
-      nama_khodam: "Kera Pintar",
+      nama_khodam: "Rusdi ketiplek",
       skill_khodam:
-        "Menghitung dengan Cepat dan Mempermudah Anda dalam Melakukan Perhitungan Kompleks",
-    },
-    {
-      nama_khodam: "Burung Cat",
-      skill_khodam: "Menghias Rumah dengan Warnai Cat yang Indah dan Menarik",
-    },
-    {
-      nama_khodam: "Ikan Sampan",
-      skill_khodam:
-        "Membantu Anda dalam Memancing dengan Mengendalikan Sampan Secara Mandiri",
-    },
-    {
-      nama_khodam: "Ayam Komputer",
-      skill_khodam:
-        "Mempercepat Proses Pengolahan Data Komputer dan Menjaga Agar Komputer Tidak Melayang",
-    },
-    {
-      nama_khodam: "Singa Kipas Angin",
-      skill_khodam:
-        "Mendinginkan Ruangan dengan Menghembus Angin yang Dingin dan Menyegarkan",
-    },
-    {
-      nama_khodam: "Kuda Sepeda",
-      skill_khodam:
-        "Mempermudah Anda dalam Bersepeda dengan Menggerakkan Sepeda Secara Mandiri",
-    },
-    {
-      nama_khodam: "Ular Telepon",
-      skill_khodam:
-        "Mempermudah Anda dalam Melakukan Panggilan Telepon dan Membalas SMS dengan Cepat",
-    },
-    {
-      nama_khodam: "Bebek Radio",
-      skill_khodam:
-        "Memainkan Musik Favorit Anda dan Menjaga Agar Suara Radio Tetap Bersih dan Rapi",
-    },
-    {
-      nama_khodam: "Kelinci Kamera",
-      skill_khodam:
-        "Membantu Anda dalam Mengambil Foto dan Video dengan Mengontrol Kamera Secara Mandiri",
-    },
-    {
-      nama_khodam: "Sapi TV",
-      skill_khodam:
-        "Memutar Film dan Acara TV Favorit Anda dengan Mengontrol TV Secara Mandiri",
-    },
-    {
-      nama_khodam: "Banteng Kulkas",
-      skill_khodam:
-        "Mempertahankan Suhu Dingin di Dalam Kulkas dan Memastikan Makanan Tetap Segar",
-    },
-    {
-      nama_khodam: "Kuda Listrik",
-      skill_khodam:
-        "Membantu Anda dalam Memasak dengan Mengontrol Listrik Secara Mandiri",
-    },
-    {
-      nama_khodam: "Gajah Mesin Cuci",
-      skill_khodam:
-        "Membantu Anda dalam Mencuci dan Membersihkan Pakaian dengan Mengontrol",
+        "Raja barbershop ahli undercut, memiliki alat khusus untuk melumpuhkan lawan dengan melakukan keplekan pinggulnya",
+      emoji_khodam: "💈",
     },
   ];
 
+  //HorrayEffect
+  function Horray(...emoji) {
+    var confetti = new Confetti();
+    confetti.addConfetti({
+      emojis: emoji,
+    });
+    confetti.addConfetti();
+  }
+
+  //Loading
   function loading() {
     inserKhodam.play();
     Swal.fire({
@@ -114,10 +74,11 @@ const card = () => {
           timer: 2000,
           showConfirmButton: false,
           allowOutsideClick: false,
-          willClose:()=>{
+          willClose: () => {
+            Horray(dataKhodam[khodam].emoji_khodam);
             setName(nama);
-          }
-        })
+          },
+        });
       },
     });
   }
