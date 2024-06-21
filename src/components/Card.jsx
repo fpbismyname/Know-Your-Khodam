@@ -11,10 +11,13 @@ const card = () => {
   const [nama, setNama] = useState("");
   const [khodam, setCurrentKhodam] = useState(0);
   const GotKhodam = new Audio(
-    "https://cdn.pixabay.com/audio/2021/08/03/audio_7991a32b95.mp3"
+    "https://www.myinstants.com/media/sounds/succes-khodam.mp3"
   );
   const inserKhodam = new Audio(
-    "https://cdn.pixabay.com/audio/2021/08/04/audio_0c8fbcb4c1.mp3"
+    "https://www.myinstants.com/media/sounds/got-khodam.mp3"
+  );
+  const resultKhodam = new Audio(
+    "https://www.myinstants.com/media/sounds/notif-harp.mp3"
   );
 
   //Data Khodam
@@ -37,7 +40,7 @@ const card = () => {
       suara_khodam: "https://www.myinstants.com/media/sounds/frog-laugh.mp3",
     },
     {
-      nama_khodam: "AmbaJin",
+      nama_khodam: "AmbatuJin",
       skill_khodam:
         "Khodam yang berbentuk arwah, Memiliki skill ulti menembak musuh dengan peluru yang berisi cairan beracun",
       emoji_khodam: "👻",
@@ -249,6 +252,7 @@ const card = () => {
     confetti.addConfetti({
       emojis: [emoji],
       confettiNumber: 20,
+      confettiRadius: 0,
     });
     confetti.addConfetti();
   }
@@ -260,7 +264,7 @@ const card = () => {
       html: "<h1 style='color:#3c72c9; font-weight:bold;'>Khodam anda sedang dicek . . .</h1>",
       icon: "info",
       iconHtml: "🔱",
-      timer: 3000,
+      timer: Math.floor(Math.random() * (5000 - 1500)),
       timerProgressBar: true,
       showConfirmButton: false,
       allowOutsideClick: false,
@@ -277,6 +281,7 @@ const card = () => {
             Horray(dataKhodam[khodam].emoji_khodam);
             setName(nama);
             soundKhodam.play();
+            resultKhodam.play();
           },
         });
       },
@@ -286,7 +291,7 @@ const card = () => {
   //Fungsi handler untuk mengisi nama
   const getName = (event) => {
     setNama(event.target.value);
-    let type = Math.floor(Math.random() * (dataKhodam.length - 0))
+    let type = Math.floor(Math.random() * (dataKhodam.length - 0));
     setCurrentKhodam(Math.floor(Math.random() * (dataKhodam.length - type)));
   };
   const setKhodam = () => {
@@ -299,12 +304,13 @@ const card = () => {
     setNama("");
     setName("");
     setCurrentKhodam(0);
+    window.location.reload();
   };
 
   //Mengembalikan Tampilan
   return (
     <>
-      <div className="flex justify-center min-h-[80vh] items-center p-5 flex-col">
+      <div className="flex justify-center min-h-[90vh] items-center flex-col">
         <div className="flex flex-col bg-blue-200 p-24 rounded-xl gap-5 mobile:p-4 mobile:gap-2 text-center mobile:w-10/12">
           <div className="flex flex-row justify-center font-bold mb-5 p-3 mobile:mb-2">
             <img
