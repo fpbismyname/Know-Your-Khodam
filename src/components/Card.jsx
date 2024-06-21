@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import KhodamIMG from "../assets/khodam.png";
 import Footer from "./Footer.jsx";
+import Swal from "sweetalert2";
 
 const card = () => {
   //Check Nama apakah sudah masuk apa belum
@@ -92,6 +93,21 @@ const card = () => {
     },
   ];
 
+  function loading() {
+    Swal.fire({
+      html: "<h1 style='color:#3c72c9; font-weight:bold;'>Khodam sedang dicek . . .</h1>",
+      icon:"info",
+      iconHtml:"🔱",
+      timer: 3000,
+      timerProgressBar: true,
+      showConfirmButton: false,
+      allowOutsideClick: false,
+      willClose: () => {
+        setName(nama);
+      },
+    });
+  };
+
   //Fungsi handler untuk mengisi nama
   const getName = (event) => {
     setNama(event.target.value);
@@ -100,7 +116,7 @@ const card = () => {
   const setKhodam = () => {
     if (setNama.length <= 0) {
     } else {
-      setName(nama);
+      loading();
     }
   };
   const resetKhodam = () => {
@@ -113,7 +129,7 @@ const card = () => {
   return (
     <>
       <div className="flex min-h-screen justify-center items-center p-5 flex-col">
-        <div className="flex flex-col bg-blue-200 p-24 rounded-xl gap-5 mobile:p-4 mobile:gap-2 flex-wrap text-center">
+        <div className="flex flex-col bg-blue-200 p-24 rounded-xl gap-5 mobile:p-4 mobile:gap-2 text-center">
           <div className="flex flex-row justify-center font-bold mb-5 p-3 mobile:mb-2">
             <img src={KhodamIMG} className="object-scale-down w-20" />
           </div>
@@ -124,8 +140,8 @@ const card = () => {
           </div>
           {name ? (
             <>
-              <div className="flex flex-row justify-center">
-                <p className="text-xl mobile:text-sm mobile:text-center">
+              <div className="flex flex-row justify-center break-words">
+                <p className="text-xl mobile:text-sm mobile:text-center text-wrap">
                   Saudara {nama}, Khodam anda adalah :
                 </p>
               </div>
@@ -141,7 +157,7 @@ const card = () => {
               </div>
               <div className="flex justify-center my-3">
                 <button
-                  className="bg-red-300 rounded-full p-5 text-md font-bold gap-2 flex"
+                  className="bg-red-300 rounded-full p-5 text-md font-bold gap-2 flex hover:bg-red-400 duration-150"
                   onClick={resetKhodam}
                 >
                   <i className="bi bi-arrow-clockwise"></i>
@@ -157,16 +173,17 @@ const card = () => {
                 </p>
               </div>
               <input
-                className="text-center text-xl p-5 rounded-full outline-none focus:font-bold mobile:text-sm mobile:p-3"
+                className="text-center text-xl p-5 rounded-full focus:font-bold mobile:text-sm mobile:p-3 outline-none hover:bg-blue-100 hover:placeholder:drop-shadow duration-150"
                 placeholder="Masukan nama untuk cek khodam"
                 type="text"
                 onChange={getName}
+                maxLength="50"
               />
               <div className="flex justify-center my-3">
                 {nama ? (
                   <>
                     <button
-                      className="bg-red-300 rounded-full p-5 text-md font-bold gap-2 flex"
+                      className="bg-red-300 rounded-full p-5 text-md font-bold gap-2 flex hover:bg-red-400 duration-150"
                       onClick={setKhodam}
                     >
                       <i className="bi bi-fire"></i>
