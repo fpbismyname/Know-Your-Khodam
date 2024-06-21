@@ -320,7 +320,7 @@ const card = () => {
             <>
               <div className="flex flex-row justify-center break-words">
                 <p className="text-xl mobile:text-sm mobile:text-center text-wrap">
-                  Saudara {nama}, Khodam anda adalah :
+                  Saudara <strong>{nama}</strong>, Khodam anda adalah :
                 </p>
               </div>
               <div className="flex justify-center text-5xl">
