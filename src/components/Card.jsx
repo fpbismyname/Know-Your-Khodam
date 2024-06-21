@@ -96,17 +96,27 @@ const card = () => {
   function loading() {
     Swal.fire({
       html: "<h1 style='color:#3c72c9; font-weight:bold;'>Khodam sedang dicek . . .</h1>",
-      icon:"info",
-      iconHtml:"🔱",
+      icon: "info",
+      iconHtml: "🔱",
       timer: 3000,
       timerProgressBar: true,
       showConfirmButton: false,
       allowOutsideClick: false,
       willClose: () => {
-        setName(nama);
+        Swal.fire({
+          html: "<h1 style='color:#3c72c9; font-weight:bold;'>Khodam ditemukan</h1>",
+          icon: "success",
+          iconHtml: "🥳",
+          timer: 2000,
+          showConfirmButton: false,
+          allowOutsideClick: false,
+          willClose:()=>{
+            setName(nama);
+          }
+        })
       },
     });
-  };
+  }
 
   //Fungsi handler untuk mengisi nama
   const getName = (event) => {
@@ -128,7 +138,7 @@ const card = () => {
   //Mengembalikan Tampilan
   return (
     <>
-      <div className="flex min-h-screen justify-center items-center p-5 flex-col">
+      <div className="flex justify-center min-h-[85vh] items-center p-5 flex-col">
         <div className="flex flex-col bg-blue-200 p-24 rounded-xl gap-5 mobile:p-4 mobile:gap-2 text-center">
           <div className="flex flex-row justify-center font-bold mb-5 p-3 mobile:mb-2">
             <img src={KhodamIMG} className="object-scale-down w-20" />
@@ -206,8 +216,8 @@ const card = () => {
             </>
           )}
         </div>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };

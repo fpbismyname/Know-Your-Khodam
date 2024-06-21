@@ -4,7 +4,7 @@ const footer = () => {
   return (
     <>
       <footer className="flex flex-col justify-center">
-        <div className="flex flex-row mt-5 mobile:flex-col">
+        <div className="flex flex-row mt-5 mobile:flex-col justify-center">
           <div className="flex flex-col justify-center text-center text-white mobile:flex-row">
             <h1>
               Created by{" "}
@@ -28,9 +28,8 @@ const footer = () => {
           </div>
         </div>
         <div className="flex flex-col justify-center text-center">
-          <p className="text-red-500">
-            On Developed{" "}
-            <i className="bi bi-exclamation-square-fill text-yellow-400"></i>
+          <p className="text-yellow-500 font-bold">
+            KYK 1.0
           </p>
         </div>
       </footer>
