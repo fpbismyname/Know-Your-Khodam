@@ -248,6 +248,7 @@ const card = () => {
     var confetti = new Confetti();
     confetti.addConfetti({
       emojis: [emoji],
+      confettiNumber: 20,
     });
     confetti.addConfetti();
   }
