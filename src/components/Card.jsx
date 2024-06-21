@@ -264,7 +264,7 @@ const card = () => {
       html: "<h1 style='color:#3c72c9; font-weight:bold;'>Khodam anda sedang dicek . . .</h1>",
       icon: "info",
       iconHtml: "🔱",
-      timer: Math.floor(Math.random() * (5000 - 1500)),
+      timer: 3000,
       timerProgressBar: true,
       showConfirmButton: false,
       allowOutsideClick: false,
@@ -274,7 +274,7 @@ const card = () => {
           html: "<h1 style='color:#3c72c9; font-weight:bold;'>Khodam ditemukan</h1>",
           icon: "success",
           iconHtml: "🥳",
-          timer: 2000,
+          timer: 1500,
           showConfirmButton: false,
           allowOutsideClick: false,
           willClose: () => {
