@@ -9,6 +9,8 @@ const card = () => {
   const [name, setName] = useState("");
   const [nama, setNama] = useState("");
   const [khodam, setCurrentKhodam] = useState(0);
+  const GotKhodam = new Audio("https://cdn.pixabay.com/audio/2021/08/03/audio_7991a32b95.mp3");
+  const inserKhodam = new Audio("https://cdn.pixabay.com/audio/2021/08/04/audio_0c8fbcb4c1.mp3");
 
   //Data Khodam
   var dataKhodam = [
@@ -94,6 +96,7 @@ const card = () => {
   ];
 
   function loading() {
+    inserKhodam.play();
     Swal.fire({
       html: "<h1 style='color:#3c72c9; font-weight:bold;'>Khodam sedang dicek . . .</h1>",
       icon: "info",
@@ -103,6 +106,7 @@ const card = () => {
       showConfirmButton: false,
       allowOutsideClick: false,
       willClose: () => {
+        GotKhodam.play();
         Swal.fire({
           html: "<h1 style='color:#3c72c9; font-weight:bold;'>Khodam ditemukan</h1>",
           icon: "success",
