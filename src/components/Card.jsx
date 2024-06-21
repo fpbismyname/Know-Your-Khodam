@@ -304,7 +304,7 @@ const card = () => {
   //Mengembalikan Tampilan
   return (
     <>
-      <div className="flex justify-center min-h-[85vh] items-center p-5 flex-col">
+      <div className="flex justify-center min-h-[80vh] items-center p-5 flex-col">
         <div className="flex flex-col bg-blue-200 p-24 rounded-xl gap-5 mobile:p-4 mobile:gap-2 text-center mobile:w-10/12">
           <div className="flex flex-row justify-center font-bold mb-5 p-3 mobile:mb-2">
             <img
