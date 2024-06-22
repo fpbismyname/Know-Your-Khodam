@@ -5,6 +5,229 @@ import Footer from "./Footer.jsx";
 import Swal from "sweetalert2";
 import Confetti from "js-confetti";
 
+//Data Khodam
+var dataKhodam = [
+  {
+    nama_khodam: "Bagas Dribble",
+    skill_khodam:
+      "Khodam pendamping yang akan selalu menjaga anda dengan kekuatan dribble manjanya",
+    emoji_khodam: "🏀",
+    warna_khodam: "#f16222",
+    suara_khodam:
+      "https://www.myinstants.com/media/sounds/what-the-hell-goofy-ahh-slv-sounds.mp3",
+  },
+  {
+    nama_khodam: "Katak Bhizer",
+    skill_khodam:
+      "Raja khodam pengendali pukulan, kebal terhadap serangan benda tajam, sekali tebas nyawa kalian terlepas",
+    emoji_khodam: "🐸",
+    warna_khodam: "#00d26a",
+    suara_khodam: "https://www.myinstants.com/media/sounds/frog-laugh.mp3",
+  },
+  {
+    nama_khodam: "AmbatuJin",
+    skill_khodam:
+      "Khodam yang berbentuk arwah, Memiliki skill ulti menembak musuh dengan peluru yang berisi cairan beracun",
+    emoji_khodam: "👻",
+    warna_khodam: "#c480cd",
+    suara_khodam:
+      "https://www.myinstants.com/media/sounds/ambatukam-harmony.mp3",
+  },
+  {
+    nama_khodam: "Rusdi ketiplek",
+    skill_khodam:
+      "Raja barbershop ahli undercut, memiliki alat khusus untuk melumpuhkan lawan dengan melakukan keplekan pinggulnya",
+    emoji_khodam: "💈",
+    warna_khodam: "#05a7ed",
+    suara_khodam:
+      "https://www.myinstants.com/media/sounds/biwir-berem-berem-bang-rusdi.mp3",
+  },
+  {
+    nama_khodam: "Joko Kopling",
+    skill_khodam:
+      "Penguasa motor kopling indonesia, memiliki kekuatan genggaman kuat anti basah saat mengenggam kopling di motor apapun",
+    emoji_khodam: "🛵",
+    warna_khodam: "#f92f60",
+    suara_khodam: "https://www.myinstants.com/media/sounds/joko-kopling.mp3",
+  },
+  {
+    nama_khodam: "Mr. Slamet",
+    skill_khodam:
+      "Khodam penjaga selalu berada dimanapun ketika kita terjatuh, kecuali tidak wkwk. memiliki ketangkasan yang sigap untuk menyelamatkan mu, insyaallah akan selamat dimanapun kalian berada",
+    emoji_khodam: "🤲",
+    warna_khodam: "#fdd641",
+    suara_khodam: "https://www.myinstants.com/media/sounds/mrslamet.mp3",
+  },
+  {
+    nama_khodam: "Ular Ngawi asli",
+    skill_khodam:
+      "Urban legend asli Ngawi, konon katanya ular ini hanya pernah terlihat sekali oleh mas Fua",
+    emoji_khodam: "🐍",
+    warna_khodam: "#00d26a",
+    suara_khodam: "https://www.myinstants.com/media/sounds/ularngawi.mp3",
+  },
+  {
+    nama_khodam: "Kevin lontong",
+    skill_khodam:
+      "Skil yang bisa memberikan lontong setiap 2 menit dan bisa di upgrade sesuai level",
+    emoji_khodam: "🍌",
+    warna_khodam: "#f9c23c",
+    suara_khodam: "https://www.myinstants.com/media/sounds/lontong.mp3",
+  },
+  {
+    nama_khodam: "Cahyo pentil",
+    skill_khodam: "Sosok penjaga para motor vloger",
+    emoji_khodam: "🏍️",
+    warna_khodam: "#ff822d",
+    suara_khodam: "https://www.myinstants.com/media/sounds/meme-tutorial.mp3",
+  },
+  {
+    nama_khodam: "Rahmat Toyota",
+    skill_khodam:
+      "Penjaga seluruh mobil toyota, memiliki ulti menyalakan telolet setiap 13 menit",
+    emoji_khodam: "🚘",
+    warna_khodam: "#26c9fc",
+    suara_khodam:
+      "https://www.myinstants.com/media/sounds/basuri-v1-nada-23.mp3",
+  },
+  {
+    nama_khodam: "Sayur Asem",
+    skill_khodam:
+      "Khodam kamu ini jarang mandi, jadi baunya sangat busuk dan sangat sangat gyat dan cocok dengan Indra Capcay",
+    emoji_khodam: "🥒",
+    warna_khodam: "#46941b",
+    suara_khodam: "https://www.myinstants.com/media/sounds/lose1.mp3",
+  },
+  {
+    nama_khodam: "ElManuk Tumalaka",
+    skill_khodam:
+      "Pengendali manuk(Burung) yang ada di bumi. Khodam ini memiliki skill mengumpulkan semua burung2 lalu memainkannya",
+    emoji_khodam: "🐦",
+    warna_khodam: "#ca0b4a",
+    suara_khodam: "https://www.myinstants.com/media/sounds/tumalaka.mp3",
+  },
+  {
+    nama_khodam: "Putri Ekonomi",
+    skill_khodam:
+      "Khodam wanita yang dapat membantu ekonomi keluarga anda, memiliki skill regen uang saku sebesar 35% dan regen maxwin ketika main *** sebesar 99%",
+    emoji_khodam: "🙆‍♀️",
+    warna_khodam: "#8b62bf",
+    suara_khodam: "https://www.myinstants.com/media/sounds/money-button.mp3",
+  },
+  {
+    nama_khodam: "Indra Capcay",
+    skill_khodam:
+      "Dapat mengeluarkan sayur capcay setiap 45 menit, Khodam ini biasanya bekerja sama dengan Sayur asem untuk melengkapi kekuatan khodam-nya",
+    emoji_khodam: "🥦",
+    warna_khodam: "#00d26a",
+    suara_khodam: "https://www.myinstants.com/media/sounds/ack.mp3",
+  },
+  {
+    nama_khodam: "Rangga Cat Lover",
+    skill_khodam:
+      "Memiliki kekuatan spawn kucing ditempat2 tertentu. Khodam ini akan spawn 30% kucing oyen di dekat seorang yang sigma, dan kucing lainnya di spawn sekat seorang yang skibidi gyat",
+    emoji_khodam: "😼",
+    warna_khodam: "#ffb02e",
+    suara_khodam:
+      "https://www.myinstants.com/media/sounds/we-live-we-love-we-lie.mp3",
+  },
+  {
+    nama_khodam: "Reza Chrome",
+    skill_khodam:
+      "Pengendali Mediafire dan Mega. Dapat membantu meningkatkan kecepatan download sebesar 999%, dan meningkatkan kecepatan upload sebesar 1999%",
+    emoji_khodam: "💻",
+    warna_khodam: "#aeaeae",
+    suara_khodam:
+      "https://www.myinstants.com/media/sounds/musica_1.mp3",
+  },
+  {
+    nama_khodam: "Dian Royko",
+    skill_khodam:
+      "Membuat penggunanya bisa memasak dengan citarasa yang pas, tanpa harus ketakutan untuk mengalami gosong pada makanan-nya",
+    emoji_khodam: "🍝",
+    warna_khodam: "#d3d3d3",
+    suara_khodam: "https://www.myinstants.com/media/sounds/am-am-mellstroy.mp3",
+  },
+  {
+    nama_khodam: "Rawa Rontek",
+    skill_khodam:
+      "Memberikan HP tambahan sebanyak 99HP sehingga membuat penggunanya terasa kekal hidup didunia",
+    emoji_khodam: "❤️‍🩹",
+    warna_khodam: "#f92f60",
+    suara_khodam: "https://www.myinstants.com/media/sounds/dukun.mp3",
+  },
+  {
+    nama_khodam: "Tuyul Sumbing",
+    skill_khodam:
+      "Tuyul ini akan selalu menjagamu walaupun selalu mengatakan slebewww",
+    emoji_khodam: "👶",
+    warna_khodam: "#fdd641",
+    suara_khodam: "https://www.myinstants.com/media/sounds/tuyul-sumbing.mp3",
+  },
+  {
+    nama_khodam: "Miaw SadCat",
+    skill_khodam:
+      "Khodam ini memiliki kekuatan untuk mengeluarkan suara yang dapat membuat pendengarnya merasakan kesedihan-nya",
+    emoji_khodam: "😿",
+    warna_khodam: "#ffa02d",
+    suara_khodam: "https://www.myinstants.com/media/sounds/miaw-miaw-miaw.mp3",
+  },
+  {
+    nama_khodam: "Ujang PLN",
+    skill_khodam:
+      "Meskipun diwilayah kalian mati lampu (Mati Listrik), Khodam ini dapat membantu rumah anda tetap menyala abangku",
+    emoji_khodam: "⚡",
+    warna_khodam: "#ff822d",
+    suara_khodam:
+      "https://www.myinstants.com/media/sounds/electricity_us849kj.mp3",
+  },
+  {
+    nama_khodam: "Pedro Royale",
+    skill_khodam:
+      "Khodam ini memiliki kekuatan untuk menjaga pakaian anda tetap bersih dan wangi",
+    emoji_khodam: "🌸",
+    warna_khodam: "#ff6dc6",
+    suara_khodam: "https://www.myinstants.com/media/sounds/pedro-pedro-pe.mp3",
+  },
+  {
+    nama_khodam: "Angsa bluetooth",
+    skill_khodam:
+      "Bisa menyerang siapa saja orang yang mengganggu tanpa harus menggunakan kabel data",
+    emoji_khodam: "🦢",
+    warna_khodam: "#9c9c9c",
+    suara_khodam:
+      "https://www.myinstants.com/media/sounds/the-bluetooth-device-is-ready-to-pair.mp3",
+  },
+  {
+    nama_khodam: "Engkong Alaska",
+    skill_khodam:
+      "Khodam ini memiliki kekuatan untuk melakukan spawn singkong setiap 0.0000003 jam, sehingga pemiliknya tidak akan kelaparan",
+    emoji_khodam: "🍠",
+    warna_khodam: "#f92f60",
+    suara_khodam: "https://www.myinstants.com/media/sounds/engkong.mp3",
+  },
+  {
+    nama_khodam: "Krekcek Baud",
+    skill_khodam:
+      "Memiliki kemampuan untuk spawn kuda lumping untuk melindungi si pemilik. Kuda yang di spawn miliki ulti melempar 200 baut kedepan lawan yang akan menerima damage sebesar 4000HP",
+    emoji_khodam: "🔩",
+    warna_khodam: "#998ea4",
+    suara_khodam:
+      "https://www.myinstants.com/media/sounds/metal-pipe-clang.mp3",
+  },
+  {
+    nama_khodam: "Basuri Aipet",
+    skill_khodam:
+      "Khodam ini dapat mengeluarkan suara telolet sebanyak 20x, sehingga dapat membantu penggunanya untuk melawan musuhnya",
+    emoji_khodam: "🚌",
+    warna_khodam: "#ffb02e",
+    suara_khodam: "https://www.myinstants.com/media/sounds/basuri-2.mp3",
+  },
+];
+
+//sound
+let soundKhodam = new Audio();
+
 const card = () => {
   //Check Nama apakah sudah masuk apa belum
   const [name, setName] = useState("");
@@ -20,232 +243,6 @@ const card = () => {
     "https://www.myinstants.com/media/sounds/notif-harp.mp3"
   );
 
-  //Data Khodam
-  var dataKhodam = [
-    {
-      nama_khodam: "Bagas Dribble",
-      skill_khodam:
-        "Khodam pendamping yang akan selalu menjaga anda dengan kekuatan dribble manjanya",
-      emoji_khodam: "🏀",
-      warna_khodam: "#f16222",
-      suara_khodam:
-        "https://www.myinstants.com/media/sounds/what-the-hell-goofy-ahh-slv-sounds.mp3",
-    },
-    {
-      nama_khodam: "Katak Bhizer",
-      skill_khodam:
-        "Raja khodam pengendali pukulan, kebal terhadap serangan benda tajam, sekali tebas nyawa kalian terlepas",
-      emoji_khodam: "🐸",
-      warna_khodam: "#00d26a",
-      suara_khodam: "https://www.myinstants.com/media/sounds/frog-laugh.mp3",
-    },
-    {
-      nama_khodam: "AmbatuJin",
-      skill_khodam:
-        "Khodam yang berbentuk arwah, Memiliki skill ulti menembak musuh dengan peluru yang berisi cairan beracun",
-      emoji_khodam: "👻",
-      warna_khodam: "#c480cd",
-      suara_khodam:
-        "https://www.myinstants.com/media/sounds/ambatukam-harmony.mp3",
-    },
-    {
-      nama_khodam: "Rusdi ketiplek",
-      skill_khodam:
-        "Raja barbershop ahli undercut, memiliki alat khusus untuk melumpuhkan lawan dengan melakukan keplekan pinggulnya",
-      emoji_khodam: "💈",
-      warna_khodam: "#05a7ed",
-      suara_khodam:
-        "https://www.myinstants.com/media/sounds/biwir-berem-berem-bang-rusdi.mp3",
-    },
-    {
-      nama_khodam: "Joko Kopling",
-      skill_khodam:
-        "Penguasa motor kopling indonesia, memiliki kekuatan genggaman kuat anti basah saat mengenggam kopling di motor apapun",
-      emoji_khodam: "🛵",
-      warna_khodam: "#f92f60",
-      suara_khodam: "https://www.myinstants.com/media/sounds/joko-kopling.mp3",
-    },
-    {
-      nama_khodam: "Mr. Slamet",
-      skill_khodam:
-        "Khodam penjaga selalu berada dimanapun ketika kita terjatuh, kecuali tidak wkwk. memiliki ketangkasan yang sigap untuk menyelamatkan mu, insyaallah akan selamat dimanapun kalian berada",
-      emoji_khodam: "🤲",
-      warna_khodam: "#fdd641",
-      suara_khodam: "https://www.myinstants.com/media/sounds/mrslamet.mp3",
-    },
-    {
-      nama_khodam: "Ular Ngawi asli",
-      skill_khodam:
-        "Urban legend asli Ngawi, konon katanya ular ini hanya pernah terlihat sekali oleh mas Fua",
-      emoji_khodam: "🐍",
-      warna_khodam: "#00d26a",
-      suara_khodam: "https://www.myinstants.com/media/sounds/ularngawi.mp3",
-    },
-    {
-      nama_khodam: "Kevin lontong",
-      skill_khodam:
-        "Skil yang bisa memberikan lontong setiap 2 menit dan bisa di upgrade sesuai level",
-      emoji_khodam: "🍌",
-      warna_khodam: "#f9c23c",
-      suara_khodam: "https://www.myinstants.com/media/sounds/lontong.mp3",
-    },
-    {
-      nama_khodam: "Cahyo pentil",
-      skill_khodam: "Sosok penjaga para motor vloger",
-      emoji_khodam: "🏍️",
-      warna_khodam: "#ff822d",
-      suara_khodam: "https://www.myinstants.com/media/sounds/meme-tutorial.mp3",
-    },
-    {
-      nama_khodam: "Rahmat Toyota",
-      skill_khodam:
-        "Penjaga seluruh mobil toyota, memiliki ulti menyalakan telolet setiap 13 menit",
-      emoji_khodam: "🚘",
-      warna_khodam: "#26c9fc",
-      suara_khodam:
-        "https://www.myinstants.com/media/sounds/basuri-v1-nada-23.mp3",
-    },
-    {
-      nama_khodam: "Sayur Asem",
-      skill_khodam:
-        "Khodam kamu ini jarang mandi, jadi baunya sangat busuk dan sangat sangat gyat dan cocok dengan Indra Capcay",
-      emoji_khodam: "🥒",
-      warna_khodam: "#46941b",
-      suara_khodam: "https://www.myinstants.com/media/sounds/lose1.mp3",
-    },
-    {
-      nama_khodam: "ElManuk Tumalaka",
-      skill_khodam:
-        "Pengendali manuk(Burung) yang ada di bumi. Khodam ini memiliki skill mengumpulkan semua burung2 lalu memainkannya",
-      emoji_khodam: "🐦",
-      warna_khodam: "#ca0b4a",
-      suara_khodam: "https://www.myinstants.com/media/sounds/tumalaka.mp3",
-    },
-    {
-      nama_khodam: "Putri Ekonomi",
-      skill_khodam:
-        "Khodam wanita yang dapat membantu ekonomi keluarga anda, memiliki skill regen uang saku sebesar 35% dan regen maxwin ketika main *** sebesar 99%",
-      emoji_khodam: "🙆‍♀️",
-      warna_khodam: "#8b62bf",
-      suara_khodam: "https://www.myinstants.com/media/sounds/money-button.mp3",
-    },
-    {
-      nama_khodam: "Indra Capcay",
-      skill_khodam:
-        "Dapat mengeluarkan sayur capcay setiap 45 menit, Khodam ini biasanya bekerja sama dengan Sayur asem untuk melengkapi kekuatan khodam-nya",
-      emoji_khodam: "🥦",
-      warna_khodam: "#00d26a",
-      suara_khodam: "https://www.myinstants.com/media/sounds/ack.mp3",
-    },
-    {
-      nama_khodam: "Rangga Cat Lover",
-      skill_khodam:
-        "Memiliki kekuatan spawn kucing ditempat2 tertentu. Khodam ini akan spawn 30% kucing oyen di dekat seorang yang sigma, dan kucing lainnya di spawn sekat seorang yang skibidi gyat",
-      emoji_khodam: "😼",
-      warna_khodam: "#ffb02e",
-      suara_khodam:
-        "https://www.myinstants.com/media/sounds/we-live-we-love-we-lie.mp3",
-    },
-    {
-      nama_khodam: "Reza Chrome",
-      skill_khodam:
-        "Pengendali Mediafire dan Mega. Dapat membantu meningkatkan kecepatan download sebesar 999%, dan meningkatkan kecepatan upload sebesar 1999%",
-      emoji_khodam: "💻",
-      warna_khodam: "#aeaeae",
-      suara_khodam:
-        "https://www.myinstants.com/media/sounds/we-live-we-love-we-lie.mp3",
-    },
-    {
-      nama_khodam: "Dian Royko",
-      skill_khodam:
-        "Membuat penggunanya bisa memasak dengan citarasa yang pas, tanpa harus ketakutan untuk mengalami gosong pada makanan-nya",
-      emoji_khodam: "🍝",
-      warna_khodam: "#d3d3d3",
-      suara_khodam:
-        "https://www.myinstants.com/media/sounds/am-am-mellstroy.mp3",
-    },
-    {
-      nama_khodam: "Rawa Rontek",
-      skill_khodam:
-        "Memberikan HP tambahan sebanyak 99HP sehingga membuat penggunanya terasa kekal hidup didunia",
-      emoji_khodam: "❤️‍🩹",
-      warna_khodam: "#f92f60",
-      suara_khodam: "https://www.myinstants.com/media/sounds/dukun.mp3",
-    },
-    {
-      nama_khodam: "Tuyul Sumbing",
-      skill_khodam:
-        "Tuyul ini akan selalu menjagamu walaupun selalu mengatakan slebewww",
-      emoji_khodam: "👶",
-      warna_khodam: "#fdd641",
-      suara_khodam: "https://www.myinstants.com/media/sounds/tuyul-sumbing.mp3",
-    },
-    {
-      nama_khodam: "Miaw SadCat",
-      skill_khodam:
-        "Khodam ini memiliki kekuatan untuk mengeluarkan suara yang dapat membuat pendengarnya merasakan kesedihan-nya",
-      emoji_khodam: "😿",
-      warna_khodam: "#ffa02d",
-      suara_khodam:
-        "https://www.myinstants.com/media/sounds/miaw-miaw-miaw.mp3",
-    },
-    {
-      nama_khodam: "Ujang PLN",
-      skill_khodam:
-        "Meskipun diwilayah kalian mati lampu (Mati Listrik), Khodam ini dapat membantu rumah anda tetap menyala abangku",
-      emoji_khodam: "⚡",
-      warna_khodam: "#ff822d",
-      suara_khodam:
-        "https://www.myinstants.com/media/sounds/electricity_us849kj.mp3",
-    },
-    {
-      nama_khodam: "Pedro Royale",
-      skill_khodam:
-        "Khodam ini memiliki kekuatan untuk menjaga pakaian anda tetap bersih dan wangi",
-      emoji_khodam: "🌸",
-      warna_khodam: "#ff6dc6",
-      suara_khodam:
-        "https://www.myinstants.com/media/sounds/pedro-pedro-pe.mp3",
-    },
-    {
-      nama_khodam: "Angsa bluetooth",
-      skill_khodam:
-        "Bisa menyerang siapa saja orang yang mengganggu tanpa harus menggunakan kabel data",
-      emoji_khodam: "🦢",
-      warna_khodam: "#9c9c9c",
-      suara_khodam:
-        "https://www.myinstants.com/media/sounds/the-bluetooth-device-is-ready-to-pair.mp3",
-    },
-    {
-      nama_khodam: "Engkong Alaska",
-      skill_khodam:
-        "Khodam ini memiliki kekuatan untuk melakukan spawn singkong setiap 0.0000003 jam, sehingga pemiliknya tidak akan kelaparan",
-      emoji_khodam: "🍠",
-      warna_khodam: "#f92f60",
-      suara_khodam: "https://www.myinstants.com/media/sounds/engkong.mp3",
-    },
-    {
-      nama_khodam: "Krekcek Baud",
-      skill_khodam:
-        "Memiliki kemampuan untuk spawn kuda lumping untuk melindungi si pemilik. Kuda yang di spawn miliki ulti melempar 200 baut kedepan lawan yang akan menerima damage sebesar 4000HP",
-      emoji_khodam: "🔩",
-      warna_khodam: "#998ea4",
-      suara_khodam:
-        "https://www.myinstants.com/media/sounds/metal-pipe-clang.mp3",
-    },
-    {
-      nama_khodam: "Basuri Aipet",
-      skill_khodam:
-        "Khodam ini dapat mengeluarkan suara telolet sebanyak 20x, sehingga dapat membantu penggunanya untuk melawan musuhnya",
-      emoji_khodam: "🚌",
-      warna_khodam: "#ffb02e",
-      suara_khodam: "https://www.myinstants.com/media/sounds/basuri-2.mp3",
-    },
-  ];
-
-  //sound
-  const soundKhodam = new Audio(dataKhodam[khodam].suara_khodam);
-
   //HorrayEffect
   function Horray(emoji) {
     var confetti = new Confetti();
@@ -254,7 +251,9 @@ const card = () => {
       confettiNumber: 20,
       confettiRadius: 0,
     });
-    confetti.addConfetti();
+    confetti.addConfetti({
+      confettiNumber: 50,
+    });
   }
 
   //Loading
@@ -270,6 +269,8 @@ const card = () => {
       allowOutsideClick: false,
       willClose: () => {
         GotKhodam.play();
+        soundKhodam = new Audio(dataKhodam[khodam].suara_khodam);
+
         Swal.fire({
           html: "<h1 style='color:#3c72c9; font-weight:bold;'>Khodam ditemukan</h1>",
           icon: "success",
@@ -304,7 +305,7 @@ const card = () => {
     setNama("");
     setName("");
     setCurrentKhodam(0);
-    window.location.reload();
+    soundKhodam.pause();
   };
 
   //Mengembalikan Tampilan
