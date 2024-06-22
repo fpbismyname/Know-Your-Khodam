@@ -252,7 +252,7 @@ const card = () => {
       confettiRadius: 0,
     });
     confetti.addConfetti({
-      confettiNumber: 50,
+      confettiNumber: 60,
     });
   }
 
@@ -263,14 +263,13 @@ const card = () => {
       html: "<h1 style='color:#3c72c9; font-weight:bold;'>Khodam anda sedang dicek . . .</h1>",
       icon: "info",
       iconHtml: "🔱",
-      timer: 3000,
+      timer: Math.round(Math.random() * (4000 - 2000) * 2),
       timerProgressBar: true,
       showConfirmButton: false,
       allowOutsideClick: false,
       willClose: () => {
         GotKhodam.play();
         soundKhodam = new Audio(dataKhodam[khodam].suara_khodam);
-
         Swal.fire({
           html: "<h1 style='color:#3c72c9; font-weight:bold;'>Khodam ditemukan</h1>",
           icon: "success",
