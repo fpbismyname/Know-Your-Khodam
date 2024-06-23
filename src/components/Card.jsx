@@ -263,7 +263,7 @@ const card = () => {
       html: "<h1 style='color:#3c72c9; font-weight:bold;'>Khodam anda sedang dicek . . .</h1>",
       icon: "info",
       iconHtml: "🔱",
-      timer: Math.round(Math.random() * (4000 - 2000) * 2),
+      timer: 3000,
       timerProgressBar: true,
       showConfirmButton: false,
       allowOutsideClick: false,
