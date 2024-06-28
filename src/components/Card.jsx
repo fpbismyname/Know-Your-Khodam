@@ -344,7 +344,7 @@ const card = () => {
               </div>
               <div className="flex justify-center text-5xl">
                 <h1
-                  className="text-5xl font-bold rounded-lg text-white p-4 drop-shadow mobile:text-xl mobile:p-2 animate-bounce"
+                  className="text-5xl font-bold rounded-lg text-white p-4 drop-shadow mobile:text-xl mobile:p-2"
                   style={{
                     backgroundColor: dataKhodam[khodam].warna_khodam,
                     color: dataKhodam[khodam].warna_khodam.length - 1,
