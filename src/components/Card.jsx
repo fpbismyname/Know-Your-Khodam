@@ -137,8 +137,7 @@ var dataKhodam = [
       "Pengendali Mediafire dan Mega. Dapat membantu meningkatkan kecepatan download sebesar 999%, dan meningkatkan kecepatan upload sebesar 1999%",
     emoji_khodam: "💻",
     warna_khodam: "#aeaeae",
-    suara_khodam:
-      "https://www.myinstants.com/media/sounds/musica_1.mp3",
+    suara_khodam: "https://www.myinstants.com/media/sounds/musica_1.mp3",
   },
   {
     nama_khodam: "Dian Royko",
@@ -318,21 +317,34 @@ const card = () => {
               className="object-scale-down w-32 mobile:w-20"
             />
           </div>
+          {/* Judul */}
           <div className="flex flex-row justify-center font-bold mb-5 p-3 mobile:mb-2">
             <h1 className="text-5xl tracking-widest mobile:text-xl">
-              Know Your Khodam
+              Cek Khodam Kamu
             </h1>
           </div>
+          {/* Hasil Khodam */}
           {name ? (
             <>
               <div className="flex flex-row justify-center break-words">
                 <p className="text-xl mobile:text-sm mobile:text-center text-wrap">
-                  Saudara <strong>{nama}</strong>, Khodam anda adalah :
+                  Saudara{" "}
+                  <strong
+                    className="px-2 py-1 bg-gray-100 border-2 rounded-full"
+                    style={{
+                      borderColor: dataKhodam[khodam].warna_khodam,
+                      borderWidth: "2px",
+                      color: dataKhodam[khodam].warna_khodam,
+                    }}
+                  >
+                    {nama}
+                  </strong>
+                  , Khodam anda adalah :
                 </p>
               </div>
               <div className="flex justify-center text-5xl">
                 <h1
-                  className="text-5xl font-bold rounded-lg text-white p-4 drop-shadow mobile:text-xl mobile:p-2"
+                  className="text-5xl font-bold rounded-lg text-white p-4 drop-shadow mobile:text-xl mobile:p-2 animate-bounce"
                   style={{
                     backgroundColor: dataKhodam[khodam].warna_khodam,
                     color: dataKhodam[khodam].warna_khodam.length - 1,
@@ -357,6 +369,7 @@ const card = () => {
               </div>
             </>
           ) : (
+            // Sebelum Hasil
             <>
               <div className="flex flex-row justify-center">
                 <p className="text-xl mobile:text-sm mobile:text-center">

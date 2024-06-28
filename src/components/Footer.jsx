@@ -28,7 +28,7 @@ const footer = () => {
           </div>
         </div>
         <div className="flex flex-col justify-center text-center">
-          <p className="text-yellow-500 font-bold">KYK - v1.0</p>
+          <p className="text-yellow-500 font-bold">CKK - v1.0</p>
         </div>
       </footer>
     </>
